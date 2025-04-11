@@ -1,0 +1,57 @@
+{
+  "projects": [
+    {
+      "id": "ba4f"
+    },
+    {
+      "id": "4649"
+    },
+    {
+      "id": "87fb"
+    },
+    {
+      "id": "61f3"
+    },
+    {
+      "id": "0b78"
+    },
+    {
+      "id": "6e8e"
+    },
+    {
+      "id": "6650"
+    },
+    {
+      "id": "841c"
+    },
+    {
+      "id": "65c3",
+      "name": "Jonson",
+      "budget": "25000",
+      "category": {
+        "id": "2",
+        "name": "Network"
+      },
+      "cost": 0,
+      "services": []
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Finances"
+    },
+    {
+      "id": "2",
+      "name": "Network"
+    },
+    {
+      "id": "3",
+      "name": "Development"
+    },
+    {
+      "id": "4",
+      "name": "Management"
+    }
+  ]
+}
