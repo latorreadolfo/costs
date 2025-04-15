@@ -1,36 +1,78 @@
 {
   "projects": [
     {
-      "id": "ba4f"
-    },
-    {
-      "id": "4649"
-    },
-    {
-      "id": "87fb"
-    },
-    {
-      "id": "61f3"
-    },
-    {
-      "id": "0b78"
-    },
-    {
-      "id": "6e8e"
-    },
-    {
-      "id": "6650"
-    },
-    {
-      "id": "841c"
-    },
-    {
       "id": "65c3",
       "name": "Jonson",
       "budget": "25000",
       "category": {
         "id": "2",
         "name": "Network"
+      },
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "a409",
+      "name": "Endereço",
+      "budget": "24000",
+      "category": {
+        "id": "3",
+        "name": "Development"
+      },
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "4965",
+      "name": "asdasd",
+      "budget": "234324",
+      "category": {
+        "id": "1",
+        "name": "Finances"
+      },
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "5ab1",
+      "name": "Adolfo",
+      "budget": "20000",
+      "category": {
+        "id": "1",
+        "name": "Finances"
+      },
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "c013",
+      "name": "asdasd",
+      "budget": "23123",
+      "category": {
+        "id": "2",
+        "name": "Network"
+      },
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "056d",
+      "name": "asdasd",
+      "budget": "2312312",
+      "category": {
+        "id": "2",
+        "name": "Network"
+      },
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "6fc9",
+      "name": "loco",
+      "budget": "26000",
+      "category": {
+        "id": "3",
+        "name": "Development"
       },
       "cost": 0,
       "services": []
