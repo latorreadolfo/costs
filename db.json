@@ -14,13 +14,38 @@
     {
       "id": "b237",
       "name": "Millers Johnson",
-      "budget": "25000",
+      "budget": "50000",
       "category": {
-        "id": "3",
-        "name": "Development"
+        "id": "1",
+        "name": "Finances"
       },
-      "cost": 0,
-      "services": []
+      "cost": 4000,
+      "services": [
+        {
+          "name": "asdasd",
+          "cost": "21312312312312",
+          "description": "asdasdas",
+          "id": "5d93f841-e5f6-4b26-b0b6-8f9450cb53e1"
+        },
+        {
+          "name": "asdasd",
+          "cost": "21312312312312",
+          "description": "asdasdas",
+          "id": "5d93f841-e5f6-4b26-b0b6-8f9450cb53e1"
+        },
+        {
+          "name": "Adolfo",
+          "cost": "2000",
+          "description": "asdasd",
+          "id": "fae77c56-21c3-4b52-9ca2-064eaf727743"
+        },
+        {
+          "name": "Adolfo s",
+          "cost": "2000",
+          "description": "asdasd",
+          "id": "cb04c321-573c-4628-ba54-1755dd4bf5e9"
+        }
+      ]
     }
   ],
   "categories": [

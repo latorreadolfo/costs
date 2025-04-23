@@ -12,6 +12,7 @@
 .project_details h1 {
   background-color: #222;
   color: #ffbb33;
+  padding: 0.2em;
 }
 
 .project_details span {
