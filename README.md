@@ -1,70 +1,159 @@
-# Getting Started with Create React App
+# 🚀 Costs – React Project Budget Manager
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a CRUD practice project built with React, focusing on componentization, state management, and modular styling. It simulates a project management app where you can:
 
-## Available Scripts
+- 📝 Create projects
+- 💸 Set budgets
+- ➕ Add services
+- 💰 Track costs
 
-In the project directory, you can run:
+All data is managed with uuid and stored using json-server, making it easy to simulate a full REST API locally.
 
-### `npm start`
+## Tech Stack:
+- React
+- JavaScript
+- uuid (for unique IDs)
+- json-server (mock backend)
+- CSS Modules (one file per component)
+- React Icons
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features:
+- Create, edit, and delete projects
+- Add and remove services tied to each project
+- Real-time cost updates and budget tracking
+- Fully componentized UI
+- Styled with modular CSS for each .js file
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## How to Run:
+```
+1. git clone https://github.com/latorreadolfo/costs.git
+2. cd costs
+3. npm install
+4. npx json-server --watch db.json --port 5000
+5. npm start
+```
 
-### `npm test`
+## Folder Structure:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+src/
+└── components/
+    ├── form/
+    ├── layout/
+    ├── pages/
+    ├── project/
+    └── service/
+```
 
-### `npm run build`
+## Practice Goals:
+This project was developed for hands-on practice with:
+- CRUD operations in React
+- State manipulation
+- Props and data flow
+- CSS modularization
+- Local API simulation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# 🚀 Costs – Gerenciador de Projetos em React
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Este é um projeto de prática CRUD feito com React, com foco em componentização, manipulação de estados e estilização modular. A ideia é simular um app de gerenciamento de projetos, onde você pode:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- 📝 Criar projetos
+- 💸 Definir orçamentos
+- ➕ Adicionar serviços
+- 💰 Controlar custos
 
-### `npm run eject`
+Os dados são manipulados com uuid e armazenados usando json-server, o que facilita a simulação de uma API REST local.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Tecnologias Utilizadas:
+- React
+- JavaScript
+- uuid (para gerar IDs únicos)
+- json-server (backend simulado)
+- CSS Modules (um por componente)
+- React Icons
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Funcionalidades:
+- Criar, editar e excluir projetos
+- Adicionar e remover serviços em cada projeto
+- Atualização em tempo real do custo e do orçamento
+- Interface totalmente componentizada
+- Estilização com CSS modular por componente
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Como Rodar:
+```
+1. git clone https://github.com/latorreadolfo/costs.git
+2. cd costs
+3. npm install
+4. npx json-server --watch db.json --port 5000
+5. npm start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Estrutura de Pastas:
+```
+src/
+└── components/
+    ├── form/
+    ├── layout/
+    ├── pages/
+    ├── project/
+    └── service/
+```
 
-## Learn More
+## Objetivo da Prática:
+Este projeto foi feito para praticar:
+- Operações CRUD no React
+- Manipulação de estados
+- Fluxo de dados via props
+- CSS modularizado
+- Simulação de API local
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#🚀 Costs – Gestor de Presupuestos con React
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Este es un proyecto de práctica CRUD desarrollado con React, centrado en la componentización, manejo de estados y estilos modulares. Simula una app de gestión de proyectos donde puedes:
 
-### Code Splitting
+- 📝 Crear proyectos
+- 💸 Definir presupuestos
+- ➕ Agregar servicios
+- 💰 Controlar costos
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Los datos se gestionan con uuid y se almacenan usando json-server, ideal para simular una API REST local.
 
-### Analyzing the Bundle Size
+## Tecnologías Utilizadas:
+- React
+- JavaScript
+- uuid (para IDs únicos)
+- json-server (API falsa local)
+- CSS Modules (uno por archivo de componente)
+- React Icons
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Funcionalidades:
+- Crear, editar y eliminar proyectos
+- Agregar y eliminar servicios por proyecto
+- Actualización en tiempo real de costos y presupuesto
+- UI totalmente dividida en componentes
+- Estilo modular con CSS por archivo
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Cómo Ejecutar:
+```
+1. git clone https://github.com/latorreadolfo/costs.git
+2. cd costs
+3. npm install
+4. npx json-server --watch db.json --port 5000
+5. npm start
+```
+## Estructura del Proyecto:
+``` src/
+└── components/
+    ├── form/
+    ├── layout/
+    ├── pages/
+    ├── project/
+    └── service/
+```
+## Objetivo de la Práctica:
+Este proyecto fue creado para practicar:
+- Operaciones CRUD con React
+- Manejo de estados
+- Flujo de datos con props
+- Modularización de CSS
+- Simulación de API local
