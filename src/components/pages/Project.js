@@ -1,9 +1,10 @@
-import { parse, v4 as uuidv4 } from 'uuid';
-
 import styles from './Project.module.css';
+
+import { parse, v4 as uuidv4 } from 'uuid';
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
+import ServiceCard from '../service/ServiceCard';
 import ServiceForm from '../service/ServiceForm';
 import ProjectForm from '../project/ProjectForm';
 import Loading from '../layout/Loading';
@@ -14,6 +15,7 @@ function Project() {
   const { id } = useParams();
 
   const [project, setProject] = useState([]);
+  const [services, setServices] = useState([]);
   const [showProjectForm, setShowProjectForm] = useState(false);
   const [showServiceForm, setShowServiceForm] = useState(false);
   const [message, setMessage] = useState('');
@@ -30,6 +32,7 @@ function Project() {
         .then((resp) => resp.json())
         .then((data) => {
           setProject(data);
+          setServices(data.services);
         })
         .catch((err) => console.log(err));
     }, 2000);
@@ -37,7 +40,7 @@ function Project() {
 
   function editPost(project) {
     setMessage('');
-
+    // budget < cost validation
     if (project.budget < project.cost) {
       setMessage('The cost cannot exceed budget');
       setType('error');
@@ -96,7 +99,36 @@ function Project() {
       .then((resp) => resp.json())
       .then((data) => {
         //show services
-        console.log(data);
+        setShowServiceForm(false);
+      })
+      .catch((err) => console.log(err));
+  }
+
+  function removeService(id, cost) {
+    setMessage('');
+
+    const servicesUpdated = project.services.filter(
+      (service) => service.id !== id
+    );
+
+    const projectUpdated = project;
+
+    projectUpdated.services = servicesUpdated;
+    projectUpdated.cost = parseFloat(projectUpdated.cost) - parseFloat(cost);
+
+    fetch(`http://localhost:5000/projects/${projectUpdated.id}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(projectUpdated),
+    })
+      .then((resp) => resp.json())
+      .then((data) => {
+        setProject(projectUpdated);
+        setServices(servicesUpdated);
+        setMessage('Service removed successfully!');
+        setType('success');
       })
       .catch((err) => console.log(err));
   }
@@ -135,10 +167,22 @@ function Project() {
                     <span>Category:</span> {project.category.name}
                   </p>
                   <p>
-                    <span>Total Budget:</span> U$D {project.budget}
+                    <span>Total Budget:</span> USD{' '}
+                    <span style={{ color: '#27ae60' }}>
+                      $
+                      {Number(project.budget).toLocaleString('en-US', {
+                        minimumFractionDigits: 2,
+                      })}
+                    </span>
                   </p>
                   <p>
-                    <span>Total Cost:</span> {project.cost}
+                    <span>Total Cost:</span> USD{' '}
+                    <span style={{ color: '#e74c3c' }}>
+                      $
+                      {project.cost.toLocaleString('en-US', {
+                        minimumFractionDigits: 2,
+                      })}
+                    </span>
                   </p>
                 </div>
               ) : (
@@ -171,7 +215,21 @@ function Project() {
             </div>
             <h2>Services</h2>
             <Container customClass='start'>
-              <p>Service Items</p>
+              {services.length > 0 &&
+                services
+                  .slice()
+                  .reverse()
+                  .map((service) => (
+                    <ServiceCard
+                      id={service.id}
+                      name={service.name}
+                      cost={service.cost}
+                      description={service.description}
+                      key={service.key}
+                      handleRemove={removeService}
+                    />
+                  ))}
+              {services.length === 0 && <p>No services to show.</p>}
             </Container>
           </Container>
         </div>
